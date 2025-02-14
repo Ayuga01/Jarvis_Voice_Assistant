@@ -13,15 +13,10 @@ engine = pyttsx3.init()
 engine.setProperty("voice", "com.apple.speech.synthesis.voice.Alex")  # Use Mac's built-in voice
 newsapi = "API_KEY"
 
-# voices = engine.getProperty("voices")
 
-# for voice in voices:
-#     print(voice.id)
 
 def speak_old(text):
     engine.say(text)
-    # engine.setProperty("voice", voices[99].id)  # Use the first available voice
-    # engine.say("Hello, this is a test.")
     engine.runAndWait()
 
 def speak(text):
@@ -76,8 +71,7 @@ def processCommand(c):
             data = r.json()  # Convert response to JSON
             articles = data.get("articles", [])  # Get the list of articles
         
-            # if articles:
-            #     speak("Top Headlines:\n")
+            
             for article in articles:
                 speak(article["title"])
     else:
@@ -90,17 +84,12 @@ def processCommand(c):
 
 
 if __name__ == "__main__":
-    # print("before speak")
     speak("Initializing Jarvis")
-    # print("aft speak")
     #Listen for the wake word jarvis
     while True:
         # obtain audio from the microphone
         r = sr.Recognizer()
-        
-        
-        
-         # recognize speech using Sphinx
+        # recognize speech using Sphinx
         print("Recognizing....")
         try:
             with sr.Microphone() as source:
@@ -109,8 +98,6 @@ if __name__ == "__main__":
             word = r.recognize_google(audio)
             if(word.lower()=="jarvis"):
                 speak("Yes Sir")
-                # speak("Initializing Jarvis")
-                #Listen for command
                 with sr.Microphone() as source:
                     print("Jarvis Activated")
                     audio = r.listen(source) 

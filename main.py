@@ -45,7 +45,7 @@ def ai_process(command):
         response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a virtual assistant named Jarvis, skilled in general tasks like Alexa and Google Assistant."},
+                {"role": "system", "content": "You are a virtual assistant named Voxen, skilled in general tasks like Alexa and Google Assistant."},
                 {"role": "user", "content": command}
             ]
         )

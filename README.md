@@ -1,8 +1,8 @@
-Jarvis - Your Personal AI Assistant 🚀
+Voxen - Your Personal AI Assistant 🚀
 
-Jarvis is an AI-powered virtual assistant built using Python. It can recognize voice commands, respond with speech, and perform various tasks like:
+Voxen is an AI-powered virtual assistant built using Python. It can recognize voice commands, respond with speech, and perform various tasks like:
 
-✅ Voice Recognition – Listens for the wake word “Jarvis” and responds to commands.
+✅ Voice Recognition – Listens for the wake word “Voxen” and responds to commands.
 ✅ Text-to-Speech (TTS) – Uses pyttsx3 to convert text into natural-sounding speech.
 ✅ Web Navigation – Opens Google, YouTube, Facebook, LinkedIn, and more.
 ✅ News Updates – Fetches real-time news headlines using NewsAPI.
